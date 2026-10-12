@@ -1,39 +1,87 @@
 package htwBerlin.FitTracker;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 public class FitTrackerEntry {
-    private int age;
-    private int height;
-    private Gender gender;
+    private String name;
+    private boolean registered;
+    private LocalDate date;
+    private double calories;
+    private double carbohydrates;
+    private double protein;
+    private int gram;
 
-    public FitTrackerEntry(int age, Gender gender, int height) {
-        this.age = age;
-        this.gender = gender;
-        this.height = height;
+    public FitTrackerEntry(String name, int gram, boolean registered, LocalDate date) {
+        this.name = name;
+        this.gram= gram;
+        this.registered = registered;
+        this.date = date;
     }
 
-    public Gender getGender() {
-        return gender;
+    public FitTrackerEntry(String name, int gram, double protein, double carbohydrates, double calories, boolean registered, LocalDate date) {
+        this.name = name;
+        this.gram = gram;
+        this.protein = protein;
+        this.carbohydrates = carbohydrates;
+        this.calories = calories;
+        this.registered = registered;
+        this.date = date;
     }
 
-    public int getHeight() {
-        return height;
+    public String getName() {
+        return name;
     }
 
-    public int getAge() {
-        return age;
+    public double getCalories() {
+        return calories;
     }
 
-    public void setHeight(int height) {
-        this.height = height;
+    public double getProtein() {
+        return protein;
     }
 
-    public void setGender(Gender gender) {
-        this.gender = gender;
+    public double getCarbohydrates() {
+        return carbohydrates;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public int getGram() {
+        return gram;
+    }
+    public boolean getRegistered() {
+        return registered;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCalories(double calories) {
+        this.calories = calories;
+    }
+
+    public void setCarbohydrates(double carbohydrates) {
+        this.carbohydrates = carbohydrates;
+    }
+
+    public void setProtein(double protein) {
+        this.protein = protein;
+    }
+
+    public void setGram(int gram) {
+        this.gram = gram;
+    }
+
+    public void setRegistered(boolean registered) {
+        this.registered = registered;
     }
 }
