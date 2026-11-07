@@ -14,13 +14,10 @@ public class FitTrackerEntry {
     private LocalDate date;
 
 
-    public FitTrackerEntry(String name, int gram, LocalDate date) {
-        this.name = name;
-        this.gram= gram;
-        this.date = date;
-    }
 
-    public FitTrackerEntry(String name, int gram, double protein, double carbohydrates, double calories, LocalDate date) {
+
+    public FitTrackerEntry(Long id, String name, int gram, double protein, double carbohydrates, double calories, LocalDate date) {
+        this.id = id;
         this.name = name;
         this.gram = gram;
         this.protein = protein;
@@ -28,6 +25,9 @@ public class FitTrackerEntry {
         this.calories = calories;
         this.date = date;
     }
+
+
+
 
     public String getName() {
         return name;
