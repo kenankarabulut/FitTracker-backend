@@ -5,28 +5,27 @@ import java.util.Date;
 import java.util.List;
 
 public class FitTrackerEntry {
+    private Long id;
     private String name;
-    private boolean registered;
-    private LocalDate date;
+    private int gram;
     private double calories;
     private double carbohydrates;
     private double protein;
-    private int gram;
+    private LocalDate date;
 
-    public FitTrackerEntry(String name, int gram, boolean registered, LocalDate date) {
+
+    public FitTrackerEntry(String name, int gram, LocalDate date) {
         this.name = name;
         this.gram= gram;
-        this.registered = registered;
         this.date = date;
     }
 
-    public FitTrackerEntry(String name, int gram, double protein, double carbohydrates, double calories, boolean registered, LocalDate date) {
+    public FitTrackerEntry(String name, int gram, double protein, double carbohydrates, double calories, LocalDate date) {
         this.name = name;
         this.gram = gram;
         this.protein = protein;
         this.carbohydrates = carbohydrates;
         this.calories = calories;
-        this.registered = registered;
         this.date = date;
     }
 
@@ -48,9 +47,6 @@ public class FitTrackerEntry {
 
     public int getGram() {
         return gram;
-    }
-    public boolean getRegistered() {
-        return registered;
     }
 
     public LocalDate getDate() {
@@ -81,7 +77,4 @@ public class FitTrackerEntry {
         this.gram = gram;
     }
 
-    public void setRegistered(boolean registered) {
-        this.registered = registered;
-    }
 }

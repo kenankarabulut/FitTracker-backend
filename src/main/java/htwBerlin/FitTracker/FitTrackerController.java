@@ -10,7 +10,9 @@ import java.util.List;
 public class FitTrackerController {
 
     @GetMapping("/")
-    public List<FitTrackerEntry> index() {
-        return List.of(new FitTrackerEntry("Chicken-Breast", 500, 20, 0.6, 180, false, LocalDate.of(2026, 8, 22)), new FitTrackerEntry("Apple", 40,true, LocalDate.of(2024, 2, 14)) );
+    public List<FitTrackerEntry> getEntries() {
+        return List.of(new FitTrackerEntry("Chicken-Breast", 500, 20, 0.6, 180, LocalDate.of(2026, 8, 22)),
+                       new FitTrackerEntry("Apple", 40, LocalDate.of(2024, 2, 14))
+        );
     }
 }
