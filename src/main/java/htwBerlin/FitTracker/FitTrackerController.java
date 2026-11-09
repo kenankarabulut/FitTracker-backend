@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 public class FitTrackerController {
 
-    @CrossOrigin
+    @CrossOrigin(origins = {"https://fittracker-frontend-b0wf.onrender.com/", "http://localhost:5173/"})
     @GetMapping("/entries")
     public List<FitTrackerEntry> getEntries() {
         return List.of(new FitTrackerEntry(1L, "Haferflocken", 80, 296.0, 47.0, 10.8, LocalDate.of(2026, 10, 19)),
