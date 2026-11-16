@@ -26,6 +26,8 @@ public class FitTrackerEntry {
         this.date = date;
     }
 
+    public FitTrackerEntry() {}
+
 
 
 
